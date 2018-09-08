@@ -93,6 +93,7 @@ rem Build
 mkdir build && cd build || exit /b
 cmake .. ^
     -DCMAKE_BUILD_TYPE=Release ^
+    -DCMAKE_CXX_FLAGS="/sdl" ^
     -DCMAKE_PREFIX_PATH="%APPVEYOR_BUILD_FOLDER%/deps;%APPVEYOR_BUILD_FOLDER%/SDL;%APPVEYOR_BUILD_FOLDER%/openal;%APPVEYOR_BUILD_FOLDER%/bullet" ^
     -DWITH_AREALIGHTS_EXAMPLE=ON ^
     -DWITH_AUDIO_EXAMPLE=ON ^

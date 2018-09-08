@@ -43,6 +43,7 @@ cd magnum || exit /b
 mkdir build && cd build || exit /b
 cmake .. ^
     -DCMAKE_BUILD_TYPE=Release ^
+    -DCMAKE_CXX_FLAGS="/sdl /permissive-" ^
     -DCMAKE_INSTALL_PREFIX=%APPVEYOR_BUILD_FOLDER%/deps ^
     -DCMAKE_PREFIX_PATH="%APPVEYOR_BUILD_FOLDER%/SDL;%APPVEYOR_BUILD_FOLDER%/openal" ^
     -DWITH_AUDIO=ON ^
